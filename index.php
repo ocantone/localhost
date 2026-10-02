@@ -168,14 +168,14 @@
       <img class="icon2" src="images/UNM.jpg" alt="Redes 1B UNM">
       <h2>Redes 1B UNM</h2>
       <p>Redes 1B en UNM</p>
-      <a class="button" href="/redes1b.unm.local/">Abrir</a>
+      <a class="button" href="http://redes1b.unm.local">Abrir</a>
     </div>
 
     <div class="card">
       <img class="icon2" src="images/utntup.jpg" alt="Programación 3 UTN TUP">
       <h2>Programaci&oacute;n 3 en UTN TUP</h2>
       <p>Mobile: NodeJS - React Native </p>
-      <a class="button" href="/prog3.utn.local/">Abrir</a>
+      <a class="button" href="http://prog3.utn.local">Abrir</a>
     </div>
 
   </main>
