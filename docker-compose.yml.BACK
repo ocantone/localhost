@@ -24,12 +24,11 @@ services:
 
   db:
     image: mysql:8.4.2
-    container_name: db
     environment:
-      MYSQL_ROOT_PASSWORD: admin1234
+      MYSQL_ROOT_PASSWORD: chiti1234
       MYSQL_DATABASE: datos
-      MYSQL_USER: prog3
-      MYSQL_PASSWORD: admin123
+      MYSQL_USER: osvaldo
+      MYSQL_PASSWORD: chiti5678
     volumes:
       - ./baseDatosWeb:/var/lib/mysql
     ports:
@@ -40,21 +39,10 @@ services:
     container_name: phpmyadmin
     environment:
       PMA_HOST: db
-      PMA_USER: prog3
-      PMA_PASSWORD: admin123
+#      PMA_PORT: 3306
+      PMA_USER: osvaldo
+      PMA_PASSWORD: chiti5678
     ports:
       - "8080:80"
-    depends_on:
-      - db
-
-  backend:
-    image: node:20-alpine
-    container_name: node-backend
-    working_dir: /usr/src/app
-    volumes:
-      - ./prog3.utn.local/api:/usr/src/app
-    ports:
-      - "3000:3000"
-    command: npm start
     depends_on:
       - db
