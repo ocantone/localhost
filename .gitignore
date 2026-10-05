@@ -1,6 +1,8 @@
 base*/
 P3.M32.26/
 prog2.utn.local/
-prog3.utn.local/
+#prog3.utn.local/
 prog3.utn.1c.2026/
 redes1b.unm.local/
+node_modules/
+**/node_modules/

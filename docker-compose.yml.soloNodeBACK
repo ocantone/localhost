@@ -1,9 +1,8 @@
 services:
-
+ 
   php:
     image: php:8.2-fpm
     container_name: php-fpm
-    command: sh -c "docker-php-ext-install pdo pdo_mysql && php-fpm"
     volumes:
       - ./:/var/www/html
       - ./redes1b.unm.local:/var/www/html/redes1b.unm.local
@@ -56,6 +55,6 @@ services:
       - ./prog3.utn.local/api:/usr/src/app
     ports:
       - "3000:3000"
-    command: sh -c "npm install && npm start"
+    command: npm start
     depends_on:
       - db
