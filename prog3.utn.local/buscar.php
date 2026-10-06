@@ -4,6 +4,7 @@ header('Content-Type: application/json; charset=utf-8');
 $dni = $_GET['dni'] ?? null;
 
 if (!$dni) {
+    /* Crea un objeto JSON y lo envia ha la respuesta HTTP */
     echo json_encode(['status' => 'error', 'message' => 'DNI no proporcionado']);
     exit;
 }
@@ -25,14 +26,14 @@ try {
     $stmt = $pdo->prepare('SELECT dni, nombre, email FROM clientes WHERE dni = ?');
     $stmt->execute([$dni]);
     $cliente = $stmt->fetch();
-
-    if ($cliente) {
+/*Pude hacer la consulta */
+    if ($cliente) {   /*  Lo encontró */
         echo json_encode(['status' => 'success', 'data' => $cliente]);
-    } else {
+    } else {    /*  No lo encontró*/
         echo json_encode(['status' => 'not_found', 'message' => 'Cliente no encontrado']);
     }
-
-} catch (PDOException $e) {
+/* No pude hacer la consulta*/
+} catch (PDOException $e) {   
     http_response_code(500);
     echo json_encode(['status' => 'error', 'message' => 'Error en la base de datos']);
 }

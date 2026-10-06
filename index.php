@@ -158,7 +158,7 @@
 <body>
   <header>
     <button id="theme-toggle">🌙 Modo oscuro</button>
-      <h1>HOLA NAHEUL !!!!! Servidor Local - Profe Osvaldo Cantone</h1>
+      <h1>Servidor Local - Profe Osvaldo Cantone</h1>
     <p>Acceso a materiales y laboratorios</p>
   </header>
 
